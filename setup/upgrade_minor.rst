@@ -21,9 +21,8 @@ There are two steps to upgrading a minor version:
 1) Update the Symfony Library via Composer
 ------------------------------------------
 
-Your ``composer.json`` file should already be configured to allow your Symfony
-packages to be upgraded to minor versions. But, if a package was not upgraded,
-check that the version constrains of your Symfony dependencies are like this:
+Your ``composer.json`` file should be configured to allow your Symfony
+packages to be upgraded to minor version:
 
 .. code-block:: json
 
@@ -31,13 +30,19 @@ check that the version constrains of your Symfony dependencies are like this:
         "...": "...",
 
         "require": {
-            "symfony/cache": "^4.0",
-            "symfony/config": "^4.0",
-            "symfony/console": "^4.0",
-            "symfony/debug": "^4.0",
-            "symfony/dependency-injection": "^4.0",
-            "symfony/dotenv": "^4.0",
+            "symfony/cache": "^4.1",
+            "symfony/config": "^4.1",
+            "symfony/console": "^4.1",
+            "symfony/debug": "^4.1",
+            "symfony/dependency-injection": "^4.1",
+            "symfony/dotenv": "^4.1",
             "...": "..."
+        },
+        "extra": {
+            "symfony": {
+                "allow-contrib": false,
+                "require": "^4.1"
+            }
         },
         "...": "...",
     }
